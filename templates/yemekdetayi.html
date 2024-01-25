@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Başlık -->
+<h1 class="display-4 text-center">Yemek Detayları</h1>
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card text-center">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/' + veri[4]) }}" alt="{{ veri[1] }}" style="max-height: 300px; object-fit: cover;">
+
+        <div class="card-body">
+          <!-- Yemek adı -->
+          <h3 class="card-title">{{ veri[1] }}</h3>
+          
+          <!-- Yemek detayları -->
+          <p class="card-text"><strong>Öğün Türü:</strong> {{ veri[2] }}</p>
+          <p class="card-text"><strong>Yemek Kategorisi:</strong> {{ veri[3] }}</p>
+          <!-- Geri dönme butonu -->
+          <a href="{{ url_for('yemek') }}" class="btn btn-outline-primary mt-3">Yemek Listesine Dön</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

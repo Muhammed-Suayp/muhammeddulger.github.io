@@ -1,0 +1,31 @@
+<!-- _header.html -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Navigasyonu aç/kapat</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='logom1.png') }}" alt="Logo" style="height: 30px;"> 
+        Hak Yemez Lokantaları
+      </a>
+    </div>
+    ...
+</nav>
+
+    
+    <!-- Toplanan navigasyon bağlantıları, formlar ve diğer içerik -->
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{{ url_for('index') }}">Ana Sayfa</a></li>
+        <li><a href="{{ url_for('yemek') }}">Sipariş Ver</a></li>
+        <li><a href="{{ url_for('about') }}">Hakkımızda</a></li>
+        <li><a href="{{ url_for('projeler') }}">Menü</a></li>
+        <li><a href="{{ url_for('contact') }}">İletişim</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

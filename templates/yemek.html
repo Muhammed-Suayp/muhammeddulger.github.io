@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Başlık -->
+<div class="text-center">
+  <h1 class="page-title">Yemek Sipariş Sayfası</h1>
+  <!-- Sipariş Verme Butonu -->
+  <a href="{{ url_for('yemekekle') }}" class="btn btn-success btn-lg">Sipariş Ver</a>
+</div>
+
+<hr>
+
+<!-- Yemek listesi -->
+<div class="row">
+  {% for yemek in veri %}
+    <!-- Yemek kartı -->
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <!-- Yemek adı ve detay sayfası linki -->
+          <h5 class="card-title">
+            <a href="{{ url_for('yemekdetayi', id=yemek[0]) }}">{{ yemek[1] }}</a>
+          </h5>
+          <!-- Yemek açıklaması -->
+          <p class="card-text">{{ yemek[2] }}</p>
+          <!-- Düzenleme ve silme butonları -->
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a href="{{ url_for('yemekguncelle', id=yemek[0]) }}" class="btn btn-sm btn-outline-secondary">Güncelle</a>
+              <a href="{{ url_for('yemeksil', id=yemek[0]) }}" class="btn btn-sm btn-outline-danger">Sil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <!-- Sipariş yoksa gösterilecek mesaj -->
+    <div class="col-12">
+      <p class="no-orders">Henüz sipariş verilmedi.</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

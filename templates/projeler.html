@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center">Menümüz</h1>
+  <hr>
+
+  <!-- Ana Yemekler -->
+  <h2 class="mt-4">Ana Yemekler</h2>
+  <div class="row mb-5">
+    <!-- Lahmacun -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <!-- Yeni ürünün görseli -->
+        <img class="card-img-top" src="{{ url_for('static', filename='lahmacun01.jpg') }}" alt="Lahmacun">
+        <div class="card-body">
+          <!-- Yeni ürünün adı -->
+          <h5 class="card-title">Lahmacun</h5>
+          <!-- Yeni ürünün açıklaması -->
+          <p class="card-text">İnce hamur üzerine özel baharatlarla hazırlanan et sosu.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Yeni ürünün fiyatı -->
+            <small class="text-muted">Fiyat: 60 TL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Adana Kebap -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img class="card-img-top" src="{{ url_for('static', filename='adana01.jpg') }}" alt="Adana Kebap">
+        <div class="card-body">
+          <h5 class="card-title">Adana Kebap</h5>
+          <p class="card-text">Baharatlarla harmanlanmış kıymadan yapılan geleneksel Türk kebap.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Fiyat: 110 TL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tavuk Şiş -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img class="card-img-top" src="{{ url_for('static', filename='tavuksis01.jpg') }}" alt="Tavuk Şiş">
+        <div class="card-body">
+          <h5 class="card-title">Tavuk Şiş</h5>
+          <p class="card-text">Izgara tavuk şişleri.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Fiyat: 80 TL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ara Sıcaklar -->
+  <h2 class="mt-4">Ara Sıcaklar</h2>
+  <div class="row mb-5">
+    <!-- Pilav -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img class="card-img-top" src="{{ url_for('static', filename='pilav01.jpg') }}" alt="Pilav">
+        <div class="card-body">
+          <h5 class="card-title">Pilav</h5>
+          <p class="card-text">Tereyağlı ve nohutlu geleneksel Türk pilavı.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Fiyat: 60 TL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Salata -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img class="card-img-top" src="{{ url_for('static', filename='salata01.jpg') }}" alt="Salata">
+        <div class="card-body">
+          <h5 class="card-title">Salata</h5>
+          <p class="card-text">Lezzetli ve taze salata.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Fiyat: 40 TL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Çiğköfte -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img class="card-img-top" src="{{ url_for('static', filename='cigkofte01.jpg') }}" alt="Çiğköfte">
+        <div class="card-body">
+          <h5 class="card-title">Çiğköfte</h5>
+          <p class="card-text">Urfalı ustalarımızdan çiğköfte.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Fiyat: 40 TL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- İçecekler -->
+  <h2 class="mt-4">İçecekler</h2>
+  <div class="row">
+    <!-- Ayran -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img class="card-img-top" src="{{ url_for('static', filename='ayran01.jpg') }}" alt="Ayran">
+        <div class="card-body">
+          <h5 class="card-title">Ayran</h5>
+          <p class="card-text">Soğuk ve ferahlatıcı ayran.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Fiyat: 20 TL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kola -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img class="card-img-top" src="{{ url_for('static', filename='kola01.jpg') }}" alt="Kola">
+        <div class="card-body">
+          <h5 class="card-title">Kola</h5>
+          <p class="card-text">Soğuk ve gazlı kola içeceği.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Fiyat: 20 TL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gazoz -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img class="card-img-top" src="{{ url_for('static', filename='gazoz01.jpg') }}" alt="Gazoz">
+        <div class="card-body">
+          <h5 class="card-title">Gazoz</h5>
+          <p class="card-text">Soğuk ve gazlı gazoz içeceği.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Fiyat: 20 TL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

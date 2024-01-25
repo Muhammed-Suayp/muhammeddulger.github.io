@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="welcome-section">
+  <h1 class="text-center">Restoranımıza Hoş Geldiniz!</h1>
+  <p class="text-center welcome-message">
+    Lezzetli yemeklerimizle sizi ağırlamaktan mutluluk duyuyoruz. Sıcak bir atmosfer ve unutulmaz tatlar için doğru yerdesiniz.
+  </p>
+
+  <!-- Sipariş Ver butonu yemek.html sayfasına yönlendirir -->
+  <div class="text-center">
+    <a href="{{ url_for('yemek') }}" class="btn btn-success btn-lg">Sipariş Ver</a>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="info-card">
+        <h2>Biz Kimiz?</h2>
+        <p>Kaliteli malzemelerle hazırlanan özel tariflerimizle hizmetinizdeyiz.</p>
+        <a href="{{ url_for('about') }}" class="btn btn-info">Hakkımızda</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="info-card">
+        <h2>Özel Lezzetler</h2>
+        <p>Menümüz, zengin çeşitlilikte ve her damak zevkine uygun seçenekler sunar.</p>
+        <a href="{{ url_for('projeler') }}" class="btn btn-info">Menümüz</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="info-card">
+        <h2>İletişim</h2>
+        <p>Her türlü soru, öneri veya geri bildirim için bize ulaşın.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-info">İletişim</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer text-center mt-4">
+  <p>© {{ current_year }} Restoran Adı. Tüm hakları saklıdır.</p>
+</footer>
+{% endblock %}

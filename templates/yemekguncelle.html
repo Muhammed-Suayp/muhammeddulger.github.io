@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center my-4">Yemek Güncelle</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Form başlangıcı -->
+            <form method="post" class="p-4 border rounded bg-light">
+                <input type="hidden" name="mealID" value="{{ veri[0] }}">
+
+                <div class="form-group">
+                    <label for="mealName">Yemek Adı:</label>
+                    <input type="text" class="form-control" id="mealName" name="mealName" value="{{ veri[1] }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="mealType">Öğün Türü:</label>
+                    <input type="text" class="form-control" id="mealType" name="mealType" value="{{ veri[2] }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="mealCategory">Yemek Kategorisi:</label>
+                    <input type="text" class="form-control" id="mealCategory" name="mealCategory" value="{{ veri[3] }}">
+                </div>
+
+                <!-- İsteğe bağlı olarak ekstra form alanları eklenebilir -->
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success">Güncelle</button>
+                </div>
+            </form>
+            <!-- Form sonu -->
+        </div>
+    </div>
+</div>
+{% endblock %}
